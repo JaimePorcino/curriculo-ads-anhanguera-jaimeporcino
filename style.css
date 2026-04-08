@@ -1,0 +1,129 @@
+/* ========== 1. RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== 2. ESTILOS GLOBAIS ========== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4fff4; /* fundo claro esverdeado */
+  color: #1b5e20; /* verde escuro */
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ========== 3. CABEÇALHO ========== */
+header {
+  background-color: #1b5e20; /* verde escuro */
+  color: #fffde7; /* amarelo bem claro */
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* ========== 4. FOTO DE PERFIL ========== */
+.foto-perfil {
+  position: relative;
+  width: 150px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 235, 59, 0.6); /* amarelo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.foto:hover {
+  transform: scale(1.1);
+  border-color: #ffeb3b; /* amarelo forte */
+  box-shadow: 0 10px 25px rgba(255, 235, 59, 0.6);
+}
+
+.foto-perfil::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px dashed rgba(255, 235, 59, 0.8); /* amarelo */
+  border-radius: 50%;
+  animation: girar 10s linear infinite;
+  pointer-events: none;
+}
+
+/* ========== 5. SEÇÕES ========== */
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(27, 94, 32, 0.15); /* sombra verde */
+}
+
+section h2 {
+  color: #2e7d32; /* verde médio */
+  border-bottom: 2px solid #fdd835; /* amarelo */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  color: #558b2f; /* verde mais suave */
+  margin: 15px 0 5px 0;
+}
+
+/* ========== 6. LISTAS ========== */
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+section:last-of-type li {
+  display: inline-block;
+  background-color: #fff9c4; /* amarelo claro */
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* ========== 7. RODAPÉ ========== */
+footer {
+  background-color: #1b5e20; /* verde escuro */
+  color: #fffde7; /* amarelo claro */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 0 0 8px 8px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.95em;
+}
+
+footer:hover {
+  background-color: #2e7d32; /* verde mais claro no hover */
+  transition: 0.3s;
+}
